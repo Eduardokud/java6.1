@@ -40,27 +40,29 @@ public class StatsService {
         for (int i = 0; i < arr.length; i++) {
             if (min > arr[i]) {
                 min = arr[i];
-                month = i+1;
+                month = i + 1;
             }
         }
         return month;
     }
-    public double amountMonthBelowAverege(double[] arr){
+
+    public double amountMonthBelowAverege(double[] arr) {
         double amountMonthSale = averageSalesAmount(arr);
         double result = 0;
-        for (int i=0; i< arr.length; i++){
-            if (arr[i]<amountMonthSale){
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < amountMonthSale) {
                 result++;
             }
         }
         return result;
 
     }
-    public double amountMonthMoreAverege(double[] arr){
+
+    public double amountMonthMoreAverege(double[] arr) {
         double amountMonthSale = averageSalesAmount(arr);
         double result = 0;
-        for (int i=0; i< arr.length; i++){
-            if (arr[i]>amountMonthSale){
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > amountMonthSale) {
                 result++;
             }
         }
